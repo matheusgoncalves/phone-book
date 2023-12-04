@@ -17,18 +17,4 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::get('/new', [ContactController::class, 'create']);
-
-Route::get('/contacts', function () {
-
-    $busca = request('search');
-
-    return view('contacts', ['busca' => $busca]);
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/contacts/{id?}', function ($id = null) {
-    return view('contact', ['id' => $id]);
-});
+Route::get('/contacts', [ContactController::class, 'contacts']);
