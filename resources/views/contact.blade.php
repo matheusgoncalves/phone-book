@@ -1,2 +1,7 @@
-<h1>Esta é a página de contato</h1>
-<a href="/">Voltar</a>
+@extends('layouts.main')
+
+@section('title', 'Orion')
+
+@section('content')
+<h1>Hello, world!</h1>
+@endsection
