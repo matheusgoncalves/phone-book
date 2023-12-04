@@ -18,5 +18,16 @@ Route::get('/', function () {
 });
 
 Route::get('/contacts', function () {
-    return view('contacts');
+
+    $busca = request('search');
+
+    return view('contacts', ['busca' => $busca]);
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/contacts/{id?}', function ($id = null) {
+    return view('contact', ['id' => $id]);
 });
