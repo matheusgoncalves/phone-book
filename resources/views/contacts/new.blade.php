@@ -3,5 +3,5 @@
 @section('title', 'Contatos do Orion')
 
 @section('content')
-<h1>Página de um contato</h1>
+<h1>Adicionar novo contato</h1>
 @endsection

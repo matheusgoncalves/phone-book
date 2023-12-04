@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'Orion')
+@section('title', 'Contatos do Orion')
 
 @section('content')
-<h1>Hello, world!</h1>
+<h1>Página de contatos</h1>
 @endsection
