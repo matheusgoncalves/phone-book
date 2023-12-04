@@ -3,5 +3,9 @@
 @section('title', 'Contatos do Orion')
 
 @section('content')
-<h1>Página de contatos</h1>
+
+@foreach ($contacts as $contact)
+    <p>{{ $contacts->id }}</p>
+@endforeach
+
 @endsection

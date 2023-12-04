@@ -3,5 +3,9 @@
 @section('title', 'Contatos do Orion')
 
 @section('content')
-<h1>Hello, world!</h1>
+
+@foreach($contacts as $contact)
+    <p>{{ $contact->name }} -- {{ $contact->cellnumber }}</p>
+@endforeach
+
 @endsection
