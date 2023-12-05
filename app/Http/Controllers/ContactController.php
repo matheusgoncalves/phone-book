@@ -17,7 +17,9 @@ class ContactController extends Controller
 
     public function create()
     {
-        return view('contacts.new');
+        $contacts = Contact::all();
+
+        return view('contacts.new', ['contacts' => $contacts]);
     }
 
     public function contacts()
@@ -36,11 +38,19 @@ class ContactController extends Controller
         $contact->name = $request->name;
         $contact->cellnumber = $request->cellnumber;
         $contact->email = $request->email;
+        $contact->note = $request->note;
 
         $contact->save();
 
         return redirect('/');
     }
 
+    public function show($id)
+    {
+        $contacts = Contact::all();
 
+        $contact = Contact::findOrFail($id);
+
+        return view('contacts.show', ['contact' => $contact, 'contacts' => $contacts]);
+    }
 }

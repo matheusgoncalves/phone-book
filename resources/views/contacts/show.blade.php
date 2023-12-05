@@ -48,51 +48,41 @@
                     <a href="/new"><i class="bi bi-person-plus-fill"></i></a>
                 </div>
                 <div>
-                    @foreach ($contacts as $contact)
+                    @foreach ($contacts as $c)
                         <div class="contact-card mb-1">
-                            <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
+                            <a href="/contacts/{{ $c->id }}">{{ $c->name }}</a>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
 
-        <div class="show col-md-5">
-            <div id="contact-create-container" class="col-md-6 mx-auto">
-                <h5>Informações do contato</h5>
-                <form action="/contacts" method="POST">
-                    @csrf
-                    <div class="form-group">
-                        <label for="name">Nome: </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome próprio">
+        <div class="show">
+            <div>
+                <div id="info-container">
+                    <div id="edit-info">
+                        <h5 class="px-3 py-2">{{ $contact->name }}</h5>
+                        <a href="/contacts/edit" class="mb-2">Editar</a>
                     </div>
-                    <div class="form-group">
-                        <label for="cellnumber">Celular: </label>
-                        <input type="number" class="form-control" id="cellnumber" name="cellnumber" placeholder="Telefone">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail: </label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Endereço: </label>
-                        <input type="text" class="form-control" id="zipcode" name="zipcode"
-                            placeholder="CEP (apenas números)">
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Cidade">
-                        <input type="text" class="form-control" id="neighborhood" name="neighborhood"
-                            placeholder="Bairro">
-                        <input type="text" class="form-control" id="street" name="street" placeholder="Rua">
-                        <input type="text" class="form-control" id="house_number" name="house_number"
-                            placeholder="Número">
-                    </div>
-                    <div class="form-group">
-                        <label for="note">Nota: </label>
-                        <input type="text" class="form-control" id="note" name="note" placeholder="Nota">
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Adicionar contato">
-                </form>
+                    
+                    <ul class="list-unstyled px-2">
+                        <li class="active">
+                            <p class="text-decoration-none px-2 d-block">
+                                <i class="bi bi-telephone-fill"></i>&nbsp&nbsp{{ $contact->cellnumber }}
+                            </p>
+                        </li>
+                        <li class="">
+                            <p class="text-decoration-none px-2 d-block"><i
+                                    class="bi bi-envelope-at-fill"></i>&nbsp&nbsp{{ $contact->email }}</p>
+                        </li>
+                        </li>
+                        <li class="">
+                            <p class="text-decoration-none px-2 d-block"><i
+                                    class="bi bi-sticky-fill"></i>&nbsp&nbsp{{ $contact->note }}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
-    @endsection
+@endsection

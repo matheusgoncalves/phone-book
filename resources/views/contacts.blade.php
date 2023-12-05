@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="main-container row d-flex">
+    <div class="main-container row d-flex" id="main-container">
         <div class="sidebar col-md-5" id="side_nav">
             <div class="header-box px-2 pt-4 pb-3 d-flex justify-content-evenly align-items-center">
                 <img src="/img/logo_model_3.png" width="45" height="45" class="d-inline-block align-top" alt="Logo">
@@ -49,16 +49,16 @@
                 </div>
                 <div>
                     @foreach ($contacts as $contact)
-                        <div id="contact-card">
-                            <a href="/contacts/{id?}">{{ $contact->name }}</a>
+                        <div class="contact-card mb-1">
+                            <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
 
-        <div class="edit col-md-5">
+        <div class="show col-md-5">
 
         </div>
-
+    </div>
     @endsection

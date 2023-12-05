@@ -18,14 +18,11 @@
             </div>
 
             <ul class="list-unstyled px-2">
-                <li class="active"><a href="/contacts" class="text-decoration-none px-3 py-2 d-block">
-                        <i class="fal fa-home"></i> <i class="bi bi-people-fill"></i> Todos os contatos</a></li>
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
-                            class="fal fa-list"></i>
+                <li class="active"><a href="/contacts" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill"></i> Todos os contatos</a></li>
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block">
                         <i class="bi bi-clock-history"></i> Frequentes</a></li>
                 </li>
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
-                            class="fal fa-users"></i> <i class="bi bi-star-fill"></i> Favoritos</a></li>
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-star-fill"></i> Favoritos</a></li>
             </ul>
         </div>
 

@@ -1,8 +1,10 @@
 body {
     background: #eee;
-    max-height: 100vh;
+}
+
+#main-container {
     max-width: 100vw;
-    overflow: hidden;
+    max-height: 100vh;
 }
 
 .input-group-addon {
@@ -12,7 +14,7 @@ body {
 
 .sidebar {
     border-right: 1px solid #CCC;    
-    min-width: 290px;
+    width: 290px;
     max-width: 290px;
 }
 
@@ -26,7 +28,7 @@ body {
     justify-content: center;
     background: #fff;
     min-width: 290px;
-    min-height: 100vh;
+    height: 100vh;
     max-width: 290px;
     border-right: 1px solid #CCC;
 }
@@ -34,6 +36,13 @@ body {
 .content a {
     text-decoration: none;
     color: #000;
+}
+
+#edit-info, #edit-info a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 155px;
 }
 
 .sidebar li a {
@@ -48,13 +57,11 @@ body {
     background-color: #eee;
 }
 
-.edit {
-    display: flex;
-    justify-content: center;
+.show {
     background-color: #fff;
-    min-width: 550px;
-    min-height: 100vh;
-    max-width: 550px;
+    min-width: 500px;
+    height: 100vh;
+    max-width: 500px;
     border-right: 1px solid #CCC;
 }
 
@@ -64,15 +71,22 @@ body {
 
 #contact-create-container {
     margin-top: 98px;
+    min-width: 300px;
+    max-height: 100vh;
+    max-width: 300px;
 }
 
-#contact-card {
+.contact-card {
     padding: 10px;
     border-radius: 10px;
     background-color: #eee;
-    margin-bottom: 5px;
 }
 
-#contact-card a {
+.contact-card a {
     margin-left: 6px;
+}
+
+#info-container {
+    margin-top: 90px;
+    margin-left: 75px;
 }
