@@ -12,7 +12,7 @@ class ContactController extends Controller
     {
         $contacts = Contact::all();
 
-        return view('welcome', ['contacts' => $contacts]);
+        return view('contacts', ['contacts' => $contacts]);
     }
 
     public function create()
@@ -21,9 +21,26 @@ class ContactController extends Controller
     }
 
     public function contacts()
-    {
-        $busca = request('search');
+{
+    $busca = request('search');
 
-        return view('contacts', ['busca' => $busca]);
+    $contacts = Contact::all();
+
+    return view('contacts', ['busca' => $busca, 'contacts' => $contacts]);
+}
+
+    public function store(Request $request)
+    {
+        $contact = new Contact();
+
+        $contact->name = $request->name;
+        $contact->cellnumber = $request->cellnumber;
+        $contact->email = $request->email;
+
+        $contact->save();
+
+        return redirect('/');
     }
+
+
 }

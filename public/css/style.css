@@ -1,0 +1,78 @@
+body {
+    background: #eee;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.input-group-addon {
+    border: none;
+    box-shadow: none;
+}
+
+.sidebar {
+    border-right: 1px solid #CCC;    
+    min-width: 290px;
+    max-width: 290px;
+}
+
+#side_nav {
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    min-width: 290px;
+    min-height: 100vh;
+    max-width: 290px;
+    border-right: 1px solid #CCC;
+}
+
+.content a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar li a {
+    color: #000;
+}
+
+#searchbar {
+    margin-top: 90px;
+}
+
+#searchbar input {
+    background-color: #eee;
+}
+
+.edit {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    min-width: 550px;
+    min-height: 100vh;
+    max-width: 550px;
+    border-right: 1px solid #CCC;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+#contact-create-container {
+    margin-top: 98px;
+}
+
+#contact-card {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    margin-bottom: 5px;
+}
+
+#contact-card a {
+    margin-left: 6px;
+}
