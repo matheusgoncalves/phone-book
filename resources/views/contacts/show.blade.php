@@ -18,13 +18,13 @@
             </div>
 
             <ul class="list-unstyled px-2">
-                <li class="active"><a href="/contacts" class="text-decoration-none px-3 py-2 d-block">
+                <li class="active"><a href="/contacts" class="text-decoration-none px-3 py-2 d-block cc-font">
                         <i class="fal fa-home"></i> <i class="bi bi-people-fill"></i> Todos os contatos</a></li>
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block cc-font"><i
                             class="fal fa-list"></i>
                         <i class="bi bi-clock-history"></i> Frequentes</a></li>
                 </li>
-                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block cc-font"><i
                             class="fal fa-users"></i> <i class="bi bi-star-fill"></i> Favoritos</a></li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
                 <div id="info-container">
                     <div id="edit-info">
                         <h5 class="px-3 py-2">{{ $contact->name }}</h5>
-                        <a href="{{ route('contacts.edit', ['id' => $contact->id]) }}" class="mb-1 editButton" data-contact-id="{{ $contact->id }}"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="{{ route('contacts.edit', ['id' => $contact->id]) }}" class="mb-1 editBtn" data-contact-id="{{ $contact->id }}"><i class="bi bi-pencil-fill"></i></a>
                         <form action="/contacts/{{ $contact->id }}" id="destroyForm" method="post">
                             @csrf
                             @method('DELETE')
