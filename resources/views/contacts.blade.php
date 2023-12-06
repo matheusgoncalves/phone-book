@@ -48,10 +48,12 @@
                     <a href="/new"><i id="add-icon" class="bi bi-person-plus-fill"></i></a>
                 </div>
                 <div>
-                    @foreach ($contacts as $contact)
-                        <div class="contact-card mb-1" id="long-name">
-                            <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
-                        </div>
+                    @foreach ($contacts as $c)
+                        <a href="/contacts/{{ $c->id }}">
+                            <div class="contact-card mb-1" id="long-name">
+                                <span>{{ $c->name }}</span>
+                            </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
