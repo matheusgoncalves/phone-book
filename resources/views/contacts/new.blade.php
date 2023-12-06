@@ -80,12 +80,14 @@
                         <label for="">Endereço: </label>
                         <input type="text" class="form-control" id="zipcode" name="address[]"
                              placeholder="CEP (apenas números)">
+                        <input type="text" class="form-control" id="state" name="address[]" placeholder="Estado">
                         <input type="text" class="form-control" id="city" name="address[]" placeholder="Cidade">
                         <input type="text" class="form-control" id="neighborhood" name="address[]" 
                             placeholder="Bairro">
                         <input type="text" class="form-control" id="street" name="address[]"  placeholder="Rua">
                         <input type="text" class="form-control" id="house_number" name="address[]" 
                             placeholder="Número">
+                        <input type="text" class="form-control" id="complement" name="address[]" placeholder="Complemento">    
                     </div>
                     <div class="form-group">
                         <label for="note">Nota: </label>

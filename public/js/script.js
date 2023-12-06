@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const zipcode = document.querySelector('#zipcode');
+    const state = document.querySelector('#state');
     const city = document.querySelector('#city');
     const neighborhood = document.querySelector('#neighborhood');
     const street = document.querySelector('#street');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const responseZipcode = await response.json();
 
+            state.value = await responseZipcode.uf;
             city.value = await responseZipcode.localidade;
             neighborhood.value = await responseZipcode.bairro;
             street.value = await responseZipcode.logradouro;

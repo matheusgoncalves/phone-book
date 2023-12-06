@@ -81,12 +81,14 @@
                         <label for="">Endereço: </label>
                         <input type="text" class="form-control" id="zipcode" name="address[]"
                              placeholder="CEP (apenas números)" value="{{ $contact->address[0] ?? '' }}">
-                        <input type="text" class="form-control" id="city" name="address[]" placeholder="Cidade" value="{{ $contact->address[1] ?? '' }}">
+                        <input type="text" class="form-control" id="state" name="address[]" placeholder="Estado" value="{{ $contact->address[1] ?? '' }}">
+                        <input type="text" class="form-control" id="city" name="address[]" placeholder="Cidade" value="{{ $contact->address[2] ?? '' }}">
                         <input type="text" class="form-control" id="neighborhood" name="address[]" 
-                            placeholder="Bairro" value="{{ $contact->address[2] ?? '' }}">
-                        <input type="text" class="form-control" id="street" name="address[]"  placeholder="Rua" value="{{ $contact->address[3] ?? '' }}">
+                            placeholder="Bairro" value="{{ $contact->address[3] ?? '' }}">
+                        <input type="text" class="form-control" id="street" name="address[]"  placeholder="Rua" value="{{ $contact->address[4] ?? '' }}">
                         <input type="text" class="form-control" id="house_number" name="address[]" 
-                            placeholder="Número" value="{{ $contact->address[4] ?? '' }}">
+                            placeholder="Número" value="{{ $contact->address[5] ?? '' }}">
+                        <input type="text" class="form-control" id="complement" name="address[]" placeholder="Complemento" value="{{ $contact->address[6] ?? '' }}">
                     </div>
                     <div class="form-group">
                         <label for="note">Nota: </label>

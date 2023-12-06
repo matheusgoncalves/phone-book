@@ -91,10 +91,12 @@
                         <div id="address" class="row d-flex">
                             <div id="address-titles" class="col">
                                 <p>CEP: </p>
+                                <p>Estado:</p>
                                 <p>Cidade: </p>
                                 <p>Bairro: </p>
                                 <p>Rua: </p>
                                 <p>Número: </p>
+                                <p>Complemento:</p>
                             </div>
                             <ul class="col" id="address-list">
                                 @foreach ($contact->address as $a)
