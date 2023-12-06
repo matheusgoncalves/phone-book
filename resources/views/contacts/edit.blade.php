@@ -48,9 +48,9 @@
                     <a href="/new"><i class="bi bi-person-plus-fill"></i></a>
                 </div>
                 <div>
-                    @foreach ($contacts as $contact)
-                        <div class="contact-card mb-1">
-                            <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
+                    @foreach ($contacts as $c)
+                        <div class="contact-card mb-1" id="long-name">
+                            <a href="/contacts/{{ $c->id }}">{{ $c->name }}</a>
                         </div>
                     @endforeach
                 </div>
@@ -65,11 +65,11 @@
                     @method('PUT')
                     <div class="form-group">
                         <label for="name">Nome: </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome próprio" value="{{ $contact->name }}">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome próprio" value="{{ $contact->name }}" required>
                     </div>
                     <div class="form-group">
                         <label for="cellnumber">Celular: </label>
-                        <input type="number" class="form-control" id="cellnumber" name="cellnumber" placeholder="Telefone" value="{{ $contact->cellnumber }}">
+                        <input type="number" class="form-control" id="cellnumber" name="cellnumber" placeholder="Telefone" value="{{ $contact->cellnumber }}" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail: </label>
@@ -90,7 +90,7 @@
                         <label for="note">Nota: </label>
                         <input type="text" class="form-control" id="note" name="note" placeholder="Nota" value="{{ $contact->note }}">
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Adicionar contato">
+                    <input type="submit" class="btn btn-primary" value="Editar contato">
                 </form>
             </div>
         </div>

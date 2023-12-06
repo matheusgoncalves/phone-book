@@ -49,16 +49,12 @@
                 </div>
                 <div>
                     @foreach ($contacts as $contact)
-                        <div class="contact-card mb-1">
+                        <div class="contact-card mb-1" id="long-name">
                             <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
                         </div>
                     @endforeach
                 </div>
             </div>
-        </div>
-
-        <div class="show col-md-5">
-
         </div>
     </div>
     @endsection

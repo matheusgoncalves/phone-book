@@ -49,7 +49,7 @@
                 </div>
                 <div>
                     @foreach ($contacts as $c)
-                        <div class="contact-card mb-1">
+                        <div class="contact-card mb-1" id="long-name">
                             <a href="/contacts/{{ $c->id }}">{{ $c->name }}</a>
                         </div>
                     @endforeach

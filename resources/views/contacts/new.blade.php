@@ -49,7 +49,7 @@
                 </div>
                 <div>
                     @foreach ($contacts as $contact)
-                        <div class="contact-card mb-1">
+                        <div class="contact-card mb-1" id="long-name">
                             <a href="/contacts/{{ $contact->id }}">{{ $contact->name }}</a>
                         </div>
                     @endforeach
@@ -64,11 +64,11 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Nome: </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome próprio">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nome próprio" required>
                     </div>
                     <div class="form-group">
                         <label for="cellnumber">Celular: </label>
-                        <input type="number" class="form-control" id="cellnumber" name="cellnumber" placeholder="Telefone">
+                        <input type="number" class="form-control" id="cellnumber" name="cellnumber" placeholder="Telefone" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail: </label>
