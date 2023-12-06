@@ -20,3 +20,17 @@ Route::get('/new', [ContactController::class, 'create']);
 Route::get('/contacts', [ContactController::class, 'contacts']);
 Route::get('/contacts/{id}', [ContactController::class, 'show']);
 Route::post('/contacts', [ContactController::class, 'store']);
+Route::delete('/contacts/{id}', [ContactController::class, 'destroy']);
+Route::get('/contacts/edit/{id}', [ContactController::class, 'edit'])->name('contacts.edit');
+Route::put('/update/{id}', [ContactController::class, 'update']);
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

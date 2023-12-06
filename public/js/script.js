@@ -35,3 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Adiciona um ouvinte de evento ao botão de exclusão
+    document.getElementById('destroyBtn').addEventListener('click', function (event) {
+        // Exibe uma caixa de diálogo de confirmação
+        var confirmacao = confirm("Tem certeza que deseja excluir este contato?");
+
+        // Se o usuário clicar em "Cancelar", impede o envio padrão do formulário
+        if (!confirmacao) {
+            event.preventDefault();
+        }
+    });
+});

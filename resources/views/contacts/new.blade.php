@@ -33,16 +33,16 @@
             <div>
                 <div class="d-flex">
                     @csrf
-                    <form id="searchbar" class="col-10 mx-auto" role="search">
+                    <form action="/" method="get" id="searchbar" class="col-10 mx-auto" role="search">
                         <div class="input-group">
-                            <input type="search" class="form-control" placeholder="Buscar contato..." aria-label="Search">
+                            <input type="search" class="form-control" name="search" placeholder="Buscar contato..." aria-label="Search">
                             <span class="input-group-text">
                                 <i class="bi bi-search"></i>
                             </span>
                         </div>
                     </form>
-
                 </div>
+                
                 <div class="d-flex p-3 justify-content-between">
                     <p></p>
                     <a href="/new"><i class="bi bi-person-plus-fill"></i></a>
@@ -76,13 +76,13 @@
                     </div>
                     <div class="form-group">
                         <label for="">Endereço: </label>
-                        <input type="text" class="form-control" id="zipcode" name="zipcode"
-                            placeholder="CEP (apenas números)">
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Cidade">
-                        <input type="text" class="form-control" id="neighborhood" name="neighborhood"
+                        <input type="text" class="form-control" id="zipcode" name="address[]"
+                             placeholder="CEP (apenas números)">
+                        <input type="text" class="form-control" id="city" name="address[]" placeholder="Cidade">
+                        <input type="text" class="form-control" id="neighborhood" name="address[]" 
                             placeholder="Bairro">
-                        <input type="text" class="form-control" id="street" name="street" placeholder="Rua">
-                        <input type="text" class="form-control" id="house_number" name="house_number"
+                        <input type="text" class="form-control" id="street" name="address[]"  placeholder="Rua">
+                        <input type="text" class="form-control" id="house_number" name="address[]" 
                             placeholder="Número">
                     </div>
                     <div class="form-group">

@@ -33,19 +33,19 @@
             <div>
                 <div class="d-flex">
                     @csrf
-                    <form id="searchbar" class="col-10 mx-auto" role="search">
+                    <form action="/" method="get" id="searchbar" class="col-10 mx-auto" role="search">
                         <div class="input-group">
-                            <input type="search" class="form-control" placeholder="Buscar contato..." aria-label="Search">
+                            <input type="search" class="form-control" name="search" placeholder="Buscar contato..." aria-label="Search">
                             <span class="input-group-text">
                                 <i class="bi bi-search"></i>
                             </span>
                         </div>
                     </form>
-
                 </div>
+                
                 <div class="d-flex p-3 justify-content-between">
                     <p></p>
-                    <a href="/new"><i class="bi bi-person-plus-fill"></i></a>
+                    <a href="/new"><i id="add-icon" class="bi bi-person-plus-fill"></i></a>
                 </div>
                 <div>
                     @foreach ($contacts as $contact)
